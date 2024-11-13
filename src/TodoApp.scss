@@ -1,0 +1,71 @@
+// TodoApp.scss
+.todo-list {
+    @apply space-y-2 mb-8;
+}
+
+.todo-item {
+    @apply flex items-center justify-between p-2 bg-white border-2 border-black rounded-lg shadow-sm;
+
+    &:hover {
+        @apply bg-gray-50;
+    }
+
+    &.completed {
+        @apply bg-gray-50 border-[#16CB4C];
+
+        span {
+            @apply text-[#16CB4C];
+        }
+    }
+}
+
+.todo-checkbox {
+    @apply w-5 h-5 rounded border-[#ECECEC] text-blue-600 focus:ring-blue-500;
+}
+
+.todo-actions {
+    @apply flex items-center gap-2;
+}
+
+.delete-btn {
+    @apply p-1 text-[#CC4900] hover:text-red-700 transition-colors duration-200;
+}
+
+.edit-input {
+    @apply flex-1 px-2 py-1 border border-[#ECECEC] rounded-md focus:outline-none
+           focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+}
+
+.search-input {
+    @apply flex-1 px-2 py-2 border border-[#ECECEC] rounded-lg focus:outline-none
+           focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+}
+
+.category-select {
+    @apply px-2 py-2 border border-[#ECECEC] rounded-lg focus:outline-none
+           focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+}
+
+.add-todo-form {
+    @apply grid grid-flow-col grid-cols-6 absolute inset-x-0 bottom-0 left-0 right-0 bg-white shadow-lg p-4 rounded-lg gap-2;
+
+    .new-todo-input {
+        @apply col-span-4 flex-1 px-2 py-2 border border-[#ECECEC] rounded-lg mr-2 focus:outline-none
+             focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+    }
+
+    .due-date-input {
+        @apply col-span-1 px-2 py-2 border border-[#ECECEC] rounded-lg mr-2 focus:outline-none
+             focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+    }
+
+    .add-btn {
+        @apply col-span-1 text-[#0071FF] rounded-lg flex
+        transition-colors duration-200 focus:outline-none focus:ring-2
+        focus:ring-offset-2;
+    }
+}
+
+.todo-header {
+    @apply bg-[#0071FF] min-h-[56px] grid content-center absolute inset-x-0 top-0 left-0 right-0 z-50;
+}
