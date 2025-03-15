@@ -1,50 +1,57 @@
-# React + TypeScript + Vite
+# Todo List 專案
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+簡潔的待辦事項管理應用程式。
 
-Currently, two official plugins are available:
+## 目錄
+- [技術棧](#技術棧)
+- [功能](#功能)
+- [開發](#開發)
+- [部署](#部署)
+- [貢獻](#貢獻)
+- [授權](#授權)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 技術棧
 
-## Expanding the ESLint configuration
+- **前端框架**: React 18
+- **語言**: TypeScript
+- **構建工具**: Vite
+- **樣式**: Tailwind CSS, SASS
+- **拖放功能**: react-beautiful-dnd
+- **圖標**: lucide-react
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 功能
 
-- Configure the top-level `parserOptions` property like this:
+- 待辦事項的創建、讀取、更新和刪除
+- 任務狀態管理（完成/未完成）
+- 拖放排序功能
+- 響應式設計
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 開發
+
+```bash
+# 安裝依賴
+npm install
+
+# 啟動開發服務器
+npm run dev
+
+# 構建生產版本
+npm run build
+
+# 預覽生產版本
+npm run preview
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## 部署
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+此專案使用 GitHub Pages 進行部署：
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+npm run deploy
 ```
+
+## 貢獻
+如果你有任何建議或想要貢獻代碼，歡迎提交 Pull Request 或開啟 Issue 與我們討論。
+
+## 授權
+此專案採用 [MIT 授權條款](LICENSE) 授權，詳情請參閱 LICENSE 文件。
